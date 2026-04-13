@@ -23,39 +23,33 @@ const Home = () => {
     const slider = scrollRef.current;
     if (!slider) return;
 
-    let animationFrameId;
-    let isInteracting = false;
-    let lastTime = 0;
-    const scrollSpeed = 50; // Pixels per second
-
-    const step = (timestamp) => {
-      if (!lastTime) lastTime = timestamp;
-      const deltaTime = (timestamp - lastTime) / 1000;
-      lastTime = timestamp;
-
-      if (!isInteracting && slider) {
-        slider.scrollLeft += scrollSpeed * deltaTime;
-        
-        // Seamless loop: scrollWidth - offsetWidth gives the max scroll position
-        if (slider.scrollLeft >= slider.scrollWidth - slider.offsetWidth - 1) {
-          slider.scrollLeft = 0;
+    // --- FRAMER MOTION POWERED AUTO-SCROLL ---
+    // Laptop & Mobile dekema ekama widiyata smooth yanna animate use karamu
+    const controls = animate(0, 1, {
+      duration: 30, // Speed eka (Wadi kaloth slow wenawa)
+      repeat: Infinity,
+      ease: "linear",
+      onUpdate: (latest) => {
+        if (slider) {
+          const maxScroll = slider.scrollWidth - slider.offsetWidth;
+          slider.scrollLeft = latest * maxScroll;
         }
       }
-      animationFrameId = requestAnimationFrame(step);
-    };
+    });
 
-    animationFrameId = requestAnimationFrame(step);
-
-    const stop = () => { isInteracting = true; };
-    const play = () => { isInteracting = false; lastTime = 0; }; // lastTime reset to avoid jump
+    // Touch karaddi thamai phone eke hira wenne. Eka nisa touch events handle karamu.
+    const stop = () => controls.pause();
+    const play = () => controls.play();
 
     slider.addEventListener('mouseenter', stop);
     slider.addEventListener('mouseleave', play);
+
+    // Mobile touch ekedi pause wela aye scroll eka start wenna meka oni
     slider.addEventListener('touchstart', stop);
     slider.addEventListener('touchend', play);
 
     return () => {
-      cancelAnimationFrame(animationFrameId);
+      controls.stop();
       slider.removeEventListener('mouseenter', stop);
       slider.removeEventListener('mouseleave', play);
       slider.removeEventListener('touchstart', stop);
@@ -78,8 +72,9 @@ const Home = () => {
       {/* --- MOBILE OPTIMIZED SLIDER --- */}
       <main
         ref={scrollRef}
-        className="flex overflow-x-auto no-scrollbar h-[65vh] md:h-[75vh] items-center cursor-grab active:cursor-grabbing"
-        style={{ scrollSnapType: 'none', scrollBehavior: 'auto' }}
+        // Phone eke auto-slide wenna oni nisa overflow-x-hidden danna.
+        // Touch karala scroll karanna oni nam 'overflow-x-auto' danna.
+        className="flex overflow-x-hidden no-scrollbar h-[65vh] md:h-[75vh] items-center"
       >
         <div className="flex flex-nowrap gap-5 md:gap-12 px-6 md:px-[20vw]">
           {outlets.map((item) => (
