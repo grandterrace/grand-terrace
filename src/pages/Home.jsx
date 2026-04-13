@@ -25,13 +25,18 @@ const Home = () => {
 
     let animationFrameId;
     let isInteracting = false;
-    const scrollSpeed = 0.8; // Speed එක මෙතනින් වෙනස් කරන්න (0.5 slow, 1.5 fast)
+    let lastTime = 0;
+    const scrollSpeed = 50; // Pixels per second
 
-    const step = () => {
+    const step = (timestamp) => {
+      if (!lastTime) lastTime = timestamp;
+      const deltaTime = (timestamp - lastTime) / 1000;
+      lastTime = timestamp;
+
       if (!isInteracting && slider) {
-        slider.scrollLeft += scrollSpeed;
+        slider.scrollLeft += scrollSpeed * deltaTime;
         
-        // Endless loop effect (ආයෙත් මුලට එන්න ඕනේ නම්)
+        // Seamless loop: scrollWidth - offsetWidth gives the max scroll position
         if (slider.scrollLeft >= slider.scrollWidth - slider.offsetWidth - 1) {
           slider.scrollLeft = 0;
         }
@@ -42,7 +47,7 @@ const Home = () => {
     animationFrameId = requestAnimationFrame(step);
 
     const stop = () => { isInteracting = true; };
-    const play = () => { isInteracting = false; };
+    const play = () => { isInteracting = false; lastTime = 0; }; // lastTime reset to avoid jump
 
     slider.addEventListener('mouseenter', stop);
     slider.addEventListener('mouseleave', play);
@@ -74,7 +79,7 @@ const Home = () => {
       <main
         ref={scrollRef}
         className="flex overflow-x-auto no-scrollbar h-[65vh] md:h-[75vh] items-center cursor-grab active:cursor-grabbing"
-        style={{ scrollBehavior: 'smooth' }}
+        style={{ scrollSnapType: 'none', scrollBehavior: 'auto' }}
       >
         <div className="flex flex-nowrap gap-5 md:gap-12 px-6 md:px-[20vw]">
           {outlets.map((item) => (
