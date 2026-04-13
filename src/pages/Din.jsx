@@ -7,24 +7,24 @@ const Dining = () => {
   return (
     // Roasted Cocoa Base Background
     <div className="bg-[#2C1E16] min-h-screen text-[#E6D5C3] selection:bg-[#6F4E37] selection:text-white">
-      
+
       {/* --- ELITE HERO SECTION --- */}
       <section className="relative h-[85vh] flex items-center justify-center overflow-hidden">
-        <motion.div 
+        <motion.div
           initial={{ scale: 1.1, opacity: 0 }}
           animate={{ scale: 1, opacity: 0.6 }}
           transition={{ duration: 1.5 }}
           className="absolute inset-0"
         >
-          <img 
-            src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&q=80&w=2000" 
+          <img
+            src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&q=80&w=2000"
             className="w-full h-full object-cover"
             alt="Roasted Cocoa Dining"
           />
           {/* Cocoa Gradient Overlay */}
           <div className="absolute inset-0 bg-gradient-to-b from-[#1A120B]/80 via-transparent to-[#2C1E16]"></div>
         </motion.div>
-        
+
         <div className="relative z-10 text-center px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -33,7 +33,7 @@ const Dining = () => {
           >
             <span className="uppercase tracking-[0.8em] text-[10px] font-bold mb-6 block text-[#C5A059]">The Cocoa Collection</span>
             <h1 className="text-6xl md:text-[100px] font-serif font-light leading-none mb-8">
-              Savor the <br/> 
+              Savor the <br />
               <span className="italic font-serif text-[#D4A574]">Deep Roast</span>
             </h1>
             <div className="w-16 h-[1px] bg-[#C5A059] mx-auto"></div>
@@ -61,11 +61,11 @@ const Dining = () => {
         <div className="space-y-48">
           {diningOutlets.map((outlet, index) => (
             <div key={outlet.id} className="relative group">
-              
+
               <div className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-12 lg:gap-20`}>
-                
+
                 {/* Visual Content with Cocoa Border */}
-                <motion.div 
+                <motion.div
                   initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
@@ -73,16 +73,16 @@ const Dining = () => {
                   className="w-full lg:w-1/2 p-2 border border-[#6F4E37]/30"
                 >
                   <div className="aspect-[4/5] md:aspect-[16/10] overflow-hidden shadow-2xl">
-                    <img 
-                      src={outlet.image} 
-                      alt={outlet.name} 
+                    <img
+                      src={outlet.image}
+                      alt={outlet.name}
                       className="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-105"
                     />
                   </div>
                 </motion.div>
 
                 {/* Text Content */}
-                <motion.div 
+                <motion.div
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -116,7 +116,7 @@ const Dining = () => {
                     <button className="bg-[#6F4E37] text-[#F5E6DA] hover:bg-[#8B5E3C] px-10 py-4 text-[10px] uppercase tracking-[0.3em] font-bold transition-all flex items-center gap-3">
                       Book a Table <ArrowRight size={14} />
                     </button>
-                    
+
                     <a href={outlet.menuLink} className="flex items-center gap-2 text-[#C5A059] hover:text-[#E6D5C3] transition-colors text-[10px] uppercase tracking-[0.3em] font-bold border-b border-transparent hover:border-[#C5A059] pb-1">
                       <Download size={14} /> Download Menu
                     </a>

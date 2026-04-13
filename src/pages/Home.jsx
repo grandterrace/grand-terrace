@@ -1,17 +1,17 @@
 import React, { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useScroll, useSpring, animate } from 'framer-motion';
-import baImg from "../assets/taptap.png";
+import baImg from "../assets/tt.jpeg";
 import kerImg from "../assets/ka.jpeg";
-import tapImg from "../assets/tapp.webp";
-import nigImg from "../assets/nig.png";
+import tapImg from "../assets/taptap.png";
+import nigImg from "../assets/shi.png";
 
 
 const outlets = [
   { id: "01", title: "Governor's Bar", subtitle: "FINE SPIRITS", img: baImg, path: "/bar" },
-  { id: "02", title: "ISTANBUL NIGHTS", subtitle: "Shisha Lounge", img: nigImg, path: "/shisha" },
+  { id: "02", title: "Istanbul Nights", subtitle: "Shisha Lounge", img: nigImg, path: "/shisha" },
   { id: "03", title: "Tap Bar", subtitle: "CRAFT BREWS", img: tapImg, path: "/tap-bar" },
-  { id: "04", title: "Governor's Karaoke", subtitle: "EXCLUSIVE DINING", img: kerImg, path: "/karaoke" },
+  { id: "04", title: "Governor's Mic Karaoke", subtitle: "EXCLUSIVE DINING", img: kerImg, path: "/karaoke" },
 ];
 
 const Home = () => {
@@ -43,7 +43,7 @@ const Home = () => {
 
     slider.addEventListener('mouseenter', stop);
     slider.addEventListener('mouseleave', play);
-    
+
     // Mobile touch ekedi pause wela aye scroll eka start wenna meka oni
     slider.addEventListener('touchstart', stop);
     slider.addEventListener('touchend', play);
@@ -59,18 +59,18 @@ const Home = () => {
 
   return (
     <div className="bg-[#0c0a09] min-h-screen pt-24 md:pt-64 overflow-hidden selection:bg-[#D4A574]">
-      
+
       {/* Header */}
       <section className="text-center mb-12 px-6 relative z-10">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
           <h2 className="text-[#E6D5C3] text-4xl md:text-8xl font-serif uppercase tracking-[0.1em]">
-            Happy <span className="italic font-light lowercase text-[#D4A574]">with</span> Us
+            Stay Happy <span className="italic font-light lowercase text-[#D4A574]">with</span> Us
           </h2>
         </motion.div>
       </section>
 
       {/* --- MOBILE OPTIMIZED SLIDER --- */}
-      <main 
+      <main
         ref={scrollRef}
         // Phone eke auto-slide wenna oni nisa overflow-x-hidden danna.
         // Touch karala scroll karanna oni nam 'overflow-x-auto' danna.

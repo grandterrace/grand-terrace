@@ -3,13 +3,13 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowUpRight, X, Sparkles, Camera } from 'lucide-react';
 
 // --- ASSETS IMPORT ---
-import barImg from '../assets/bar.png';
+import barImg from '../assets/taptap.png';
 import karaokeImg from '../assets/karaoke.png';
-import nightsImg from '../assets/nights.jpg';
-import tapImg from '../assets/tap.png';
+import nightsImg from '../assets/shi.png';
+import tapImg from '../assets/tt.jpeg';
 import tapbarImg from '../assets/tapbar.png';
 import niImg from '../assets/ni.png';
-import nightImg from '../assets/nig.png';
+import nightImg from '../assets/ka.jpeg';
 import kerImg from '../assets/ker.png';
 
 const galleryImages = [
@@ -29,19 +29,19 @@ export default function GalleryPage() {
   const [filter, setFilter] = useState("All");
   const [selectedImg, setSelectedImg] = useState(null);
 
-  const filteredImages = filter === "All" 
-    ? galleryImages 
+  const filteredImages = filter === "All"
+    ? galleryImages
     : galleryImages.filter(img => img.category === filter || img.category.includes(filter));
 
   return (
     <div className="bg-[#0c0a09] min-h-screen pt-40 pb-24 selection:bg-[#D4A574] selection:text-black overflow-hidden">
-      
+
       {/* Ambient Glows */}
       <div className="fixed top-0 right-0 w-[600px] h-[600px] bg-[#D4A574]/5 blur-[150px] rounded-full -z-0"></div>
       <div className="fixed bottom-0 left-0 w-[500px] h-[500px] bg-[#D4A574]/5 blur-[150px] rounded-full -z-0"></div>
 
       <div className="relative z-10 max-w-[1600px] mx-auto px-6 md:px-12">
-        
+
         {/* --- HEADER SECTION --- */}
         <header className="text-center mb-20">
           <motion.div
@@ -53,7 +53,7 @@ export default function GalleryPage() {
           </motion.div>
 
           <div className="overflow-hidden mb-4">
-            <motion.h1 
+            <motion.h1
               initial={{ y: "100%" }}
               animate={{ y: 0 }}
               transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
@@ -64,7 +64,7 @@ export default function GalleryPage() {
             </motion.h1>
           </div>
 
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -80,11 +80,10 @@ export default function GalleryPage() {
             <button
               key={cat}
               onClick={() => setFilter(cat)}
-              className={`px-8 py-2.5 rounded-full text-[10px] tracking-[0.3em] uppercase transition-all duration-500 border ${
-                filter === cat 
-                ? "bg-[#D4A574] text-black border-[#D4A574] shadow-[0_0_20px_rgba(212,165,116,0.2)]" 
-                : "border-white/10 text-stone-500 hover:border-[#D4A574]/40 hover:text-[#D4A574]"
-              }`}
+              className={`px-8 py-2.5 rounded-full text-[10px] tracking-[0.3em] uppercase transition-all duration-500 border ${filter === cat
+                  ? "bg-[#D4A574] text-black border-[#D4A574] shadow-[0_0_20px_rgba(212,165,116,0.2)]"
+                  : "border-white/10 text-stone-500 hover:border-[#D4A574]/40 hover:text-[#D4A574]"
+                }`}
             >
               {cat}
             </button>
@@ -106,8 +105,8 @@ export default function GalleryPage() {
                 className="relative group cursor-pointer overflow-hidden rounded-xl border border-white/5 bg-stone-900/40 break-inside-avoid"
               >
                 <div className="overflow-hidden">
-                  <motion.img 
-                    src={img.url} 
+                  <motion.img
+                    src={img.url}
                     alt={img.title}
                     whileHover={{ scale: 1.08 }}
                     transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
@@ -136,7 +135,7 @@ export default function GalleryPage() {
       {/* --- LIGHTBOX (Fix කරපු කොටස) --- */}
       <AnimatePresence>
         {selectedImg && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -147,8 +146,8 @@ export default function GalleryPage() {
             <button className="absolute top-6 right-6 text-white/50 hover:text-[#D4A574] transition-colors z-[110]">
               <X size={32} strokeWidth={1} />
             </button>
-            
-            <motion.div 
+
+            <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
@@ -157,10 +156,10 @@ export default function GalleryPage() {
             >
               {/* Image Container with Constraints */}
               <div className="relative w-full flex justify-center">
-                <img 
-                  src={selectedImg.url} 
-                  className="max-w-full max-h-[75vh] object-contain rounded-lg shadow-2xl border border-white/10" 
-                  alt="Preview" 
+                <img
+                  src={selectedImg.url}
+                  className="max-w-full max-h-[75vh] object-contain rounded-lg shadow-2xl border border-white/10"
+                  alt="Preview"
                 />
               </div>
 

@@ -1,7 +1,7 @@
-import baImg from "../assets/ba.png";
-import kerImg from "../assets/ker.png";
-import tapImg from "../assets/tap.png";
-import nigImg from "../assets/nig.png";
+import baImg from "../assets/tt.jpeg";
+import kerImg from "../assets/ka.jpeg";
+import tapImg from "../assets/taptap.png";
+import nigImg from "../assets/shi.png";
 
 import governorsBarMenu from "../menus/bite menu.pdf";
 import karaokeSuiteMenu from "../menus/bar menu.pdf";
@@ -22,7 +22,7 @@ export const diningOutlets = [
   },
   {
     id: 2,
-    name: "KARAOKE SUITE",
+    name: "Governor's Mic Karaoke",
     cuisine: "Asian Fusion & Bites",
     description:
       "Sing your heart out in total privacy. Our Karaoke Suites combine a state-of-the-art sound system with a vibrant menu of Asian street food and signature platters perfect for sharing with the squad.",

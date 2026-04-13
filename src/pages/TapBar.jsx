@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Beer } from 'lucide-react';
-import tapImg from "../assets/tap.png";
+import tapImg from "../assets/taptap.png";
 
 const TapBar = () => {
   return (
@@ -21,7 +21,7 @@ const TapBar = () => {
           <h2 className="text-[#D4A574] text-[10px] uppercase tracking-[0.4em] font-black mb-8 italic">Crafted & Chilled</h2>
           <p className="text-2xl md:text-3xl font-light italic opacity-80 leading-relaxed">"The city's heartbeat. 10+ craft beers on tap, live sports, and the ultimate pub atmosphere for the modern explorer."</p>
         </div>
-        
+
       </section>
     </div>
   );
