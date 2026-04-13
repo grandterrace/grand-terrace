@@ -23,33 +23,34 @@ const Home = () => {
     const slider = scrollRef.current;
     if (!slider) return;
 
-    // --- FRAMER MOTION POWERED AUTO-SCROLL ---
-    // Laptop & Mobile dekema ekama widiyata smooth yanna animate use karamu
-    const controls = animate(0, 1, {
-      duration: 30, // Speed eka (Wadi kaloth slow wenawa)
-      repeat: Infinity,
-      ease: "linear",
-      onUpdate: (latest) => {
-        if (slider) {
-          const maxScroll = slider.scrollWidth - slider.offsetWidth;
-          slider.scrollLeft = latest * maxScroll;
+    let animationFrameId;
+    let isInteracting = false;
+    const scrollSpeed = 0.8; // Speed එක මෙතනින් වෙනස් කරන්න (0.5 slow, 1.5 fast)
+
+    const step = () => {
+      if (!isInteracting && slider) {
+        slider.scrollLeft += scrollSpeed;
+        
+        // Endless loop effect (ආයෙත් මුලට එන්න ඕනේ නම්)
+        if (slider.scrollLeft >= slider.scrollWidth - slider.offsetWidth - 1) {
+          slider.scrollLeft = 0;
         }
       }
-    });
+      animationFrameId = requestAnimationFrame(step);
+    };
 
-    // Touch karaddi thamai phone eke hira wenne. Eka nisa touch events handle karamu.
-    const stop = () => controls.pause();
-    const play = () => controls.play();
+    animationFrameId = requestAnimationFrame(step);
+
+    const stop = () => { isInteracting = true; };
+    const play = () => { isInteracting = false; };
 
     slider.addEventListener('mouseenter', stop);
     slider.addEventListener('mouseleave', play);
-
-    // Mobile touch ekedi pause wela aye scroll eka start wenna meka oni
     slider.addEventListener('touchstart', stop);
     slider.addEventListener('touchend', play);
 
     return () => {
-      controls.stop();
+      cancelAnimationFrame(animationFrameId);
       slider.removeEventListener('mouseenter', stop);
       slider.removeEventListener('mouseleave', play);
       slider.removeEventListener('touchstart', stop);
@@ -72,9 +73,8 @@ const Home = () => {
       {/* --- MOBILE OPTIMIZED SLIDER --- */}
       <main
         ref={scrollRef}
-        // Phone eke auto-slide wenna oni nisa overflow-x-hidden danna.
-        // Touch karala scroll karanna oni nam 'overflow-x-auto' danna.
-        className="flex overflow-x-hidden no-scrollbar h-[65vh] md:h-[75vh] items-center"
+        className="flex overflow-x-auto no-scrollbar h-[65vh] md:h-[75vh] items-center cursor-grab active:cursor-grabbing"
+        style={{ scrollBehavior: 'smooth' }}
       >
         <div className="flex flex-nowrap gap-5 md:gap-12 px-6 md:px-[20vw]">
           {outlets.map((item) => (
