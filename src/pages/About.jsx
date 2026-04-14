@@ -41,7 +41,6 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
             <StatItem icon={<ChefHat />} value="08" label="Master Culinarians" />
-            <StatItem icon={<Award />} value="12" label="Culinary Awards" />
             <StatItem icon={<Globe />} value="04" label="Global Concepts" />
             <StatItem icon={<Users />} value="25K+" label="Distinguished Guests" />
           </div>
