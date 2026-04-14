@@ -29,7 +29,7 @@ const Home = () => {
 
     const startAutoScroll = (fromProgress = 0) => {
       if (controls) controls.stop();
-      
+
       const remainingDuration = 30 * (1 - fromProgress);
 
       controls = animate(fromProgress, 1, {
@@ -79,7 +79,7 @@ const Home = () => {
 
   return (
     <div className="bg-[#0c0a09] min-h-screen pt-24 md:pt-64 overflow-hidden selection:bg-[#D4A574]">
-      
+
       {/* Header */}
       <section className="text-center mb-12 px-6 relative z-10">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
@@ -90,14 +90,14 @@ const Home = () => {
       </section>
 
       {/* --- MOBILE OPTIMIZED SLIDER --- */}
-      <main 
+      <main
         ref={scrollRef}
-        className="flex overflow-x-auto no-scrollbar h-[65vh] md:h-[75vh] items-center touch-pan-x cursor-grab active:cursor-grabbing"
+        className="flex overflow-x-auto no-scrollbar h-[75vh] md:h-[85vh] items-center touch-pan-x cursor-grab active:cursor-grabbing"
       >
         <div className="flex flex-nowrap gap-5 md:gap-12 px-6 md:px-[20vw]">
           {outlets.map((item) => (
-            <section key={item.id} className="w-[85vw] md:w-[480px] flex-shrink-0">
-              <div className="relative aspect-[9/14] md:aspect-[9/15] overflow-hidden rounded-[40px] md:rounded-[60px] border border-white/5 shadow-2xl group">
+            <section key={item.id} className="h-[65vh] md:h-[75vh] flex-shrink-0">
+              <div className="h-full aspect-[9/14] md:aspect-[9/15] relative overflow-hidden rounded-[40px] md:rounded-[60px] border border-white/5 shadow-2xl group">
                 <img src={item.img} alt={item.title} className="w-full h-full object-cover opacity-70" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
                 <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-8">

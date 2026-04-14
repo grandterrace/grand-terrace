@@ -65,7 +65,7 @@ export default function Navbar() {
       <div className="hidden lg:block bg-[#0c0a08]/95 backdrop-blur-sm border-b border-[#D4A574]/10 relative">
         <div className="max-w-[1600px] mx-auto px-8 flex flex-col items-center pt-10 pb-6">
           <div className="relative h-10 w-full flex justify-center items-center">
-            <Link to="/" className="absolute top-[-22px] z-[1001] group">
+            <Link to="/" className="absolute left-1/2 -translate-x-1/2 top-[-22px] z-[1001] group">
               <img
                 src={MainLogo}
                 alt="Grand Terrace Logo"
@@ -111,16 +111,15 @@ export default function Navbar() {
       </div>
 
       {/* ── MOBILE NAVBAR ── */}
-      <div className="lg:hidden bg-[#0c0a08] border-b border-[#D4A574]/10 px-5 py-4 flex items-center justify-between">
+      <div className="lg:hidden bg-[#0c0a08] border-b border-[#D4A574]/10 px-8 py-7 flex items-center justify-between relative">
         <button onClick={() => setOpen(!open)} className="text-[#D4A574]">
           {open ? <X size={28} /> : <Menu size={28} />}
         </button>
-        <Link to="/">
+        <Link to="/" className="absolute left-1/2 -translate-x-1/2">
           <img src={MainLogo} alt="Logo" className="h-10 w-auto brightness-110" />
         </Link>
-        <button className="bg-[#D4A574] text-black px-5 py-2 text-[10px] font-black uppercase rounded-sm">
-          Book
-        </button>
+        {/* Spacer to keep flex layout balanced */}
+        <div className="w-14" />
       </div>
 
       {/* ── MOBILE OVERLAY MENU ── */}
