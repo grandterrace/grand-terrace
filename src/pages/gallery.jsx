@@ -10,7 +10,6 @@ import tapImg from '../assets/tt.jpeg';
 import tapbarImg from '../assets/tapbar.png';
 import niImg from '../assets/ni.png';
 import nightImg from '../assets/ka.jpeg';
-import kerImg from '../assets/ker.png';
 
 const galleryImages = [
   { url: barImg, title: "The Grand Bar", category: "Dining" },
@@ -20,7 +19,6 @@ const galleryImages = [
   { url: tapbarImg, title: "Tap Bar Interior", category: "Dining" },
   { url: niImg, title: "Signature Cocktails", category: "Mixology" },
   { url: nightImg, title: "Evening Glow", category: "Vibe" },
-  { url: kerImg, title: "Grand Terrace Spreads", category: "Cuisine" },
 ];
 
 const categories = ["All", "Shisha", "Bar", "Entertainment"];

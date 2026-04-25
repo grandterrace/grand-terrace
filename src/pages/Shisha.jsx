@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Flame, Wind, BookOpen } from 'lucide-react';
+import { ArrowLeft, Flame, Wind, BookOpen, Clock, MapPin } from 'lucide-react';
 import nigImg from "../assets/shi.png";
 
 const Shisha = () => {
@@ -35,11 +35,19 @@ const Shisha = () => {
       <section className="py-20 px-6 md:px-20 max-w-7xl mx-auto grid md:grid-cols-2 gap-20">
         <div className="space-y-8">
           <h2 className="text-[#D4A574] text-[10px] uppercase tracking-[0.4em] font-black mb-8 italic">
-            Exotic Rooftop Lounge
+            Shisha and hookah on the terrace
+
           </h2>
           <p className="text-2xl md:text-3xl font-light italic opacity-80 leading-relaxed">
-            "Transport yourself to the heart of Turkey. Premium shisha blends, Mediterranean bites, and starlit views of the city."
+            "Transport yourself to the heart of Turkey mocktails, fresh juice with Mediterranean bites, and starlit views of the city."
           </p>
+
+          <div className="flex gap-10 pt-10 border-t border-white/5">
+            <div className="flex items-center gap-3">
+              <Clock className="text-[#D4A574]" size={18}/>
+              <span className="text-xs tracking-widest">2pm to midnight</span>
+            </div>
+          </div>
 
           {/* --- SHISHA MENU DOWNLOAD BUTTON --- */}
           <div className="pt-8">

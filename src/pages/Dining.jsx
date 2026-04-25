@@ -4,15 +4,16 @@ import { Wine, Download, ArrowRight, Flame, Zap, Beer as BeerIcon, Utensils, Win
 import { diningOutlets } from '../data/diningData';
 
 // PDF Imports
-import governorsBarMenu from "../menus/bite menu.pdf";
-import karaokeSuiteMenu from "../menus/bar menu.pdf";
-import tapBarMenu from "../menus/beer menu.pdf";
-import istanbulMenu from "../menus/istanbul-nights-menu.pdf";
+// PDF Paths
+const governorsBarMenu = "/menus/Bite_Menu.pdf";
+const karaokeSuiteMenu = "/menus/Bar_Menu.pdf";
+const tapBarMenu = "/menus/Beer_Menu.pdf";
+const istanbulMenu = "/menus/Istanbul_Nights_Menu.pdf";
 
 const Dining = () => {
   return (
     <div className="bg-[#0c0a09] min-h-screen pt-32 selection:bg-[#D4A574] selection:text-black">
-
+      
       {/* --- HERO SECTION --- */}
       <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
@@ -53,7 +54,7 @@ const Dining = () => {
         <div className="grid grid-cols-1 gap-40">
           {diningOutlets.map((outlet, index) => {
             const isGovernorsBar = outlet.name === "GOVERNOR'S BAR";
-            const isKaraoke = outlet.name === "Governor's Mic Karaoke";
+            const isKaraoke = outlet.name === "KARAOKE SUITE";
             const isTapBar = outlet.name === "TAP BAR";
             const isIstanbul = outlet.name === "ISTANBUL NIGHTS";
 
@@ -102,7 +103,7 @@ const Dining = () => {
                       <Flame className="text-[#D4A574] shrink-0" size={18} />
                       <div>
                         <span className="block text-[9px] uppercase text-stone-500 tracking-[0.2em] font-bold mb-1">Timing</span>
-                        <span className="text-[13px] text-stone-200">{outlet.openingHours}</span>
+                        <span className="text-[13px] text-stone-200">2pm to midnight</span>
                       </div>
                     </div>
                   </div>
@@ -124,12 +125,12 @@ const Dining = () => {
                     ) : isIstanbul ? (
                       /* Istanbul Nights lassanata icons ekka menu eka download wenna */
                       <a href={istanbulMenu} download="Istanbul_Nights_Menu.pdf" className="flex-1 md:flex-none border border-white/10 hover:border-[#D4A574] text-stone-300 hover:text-[#D4A574] px-10 py-5 text-[11px] font-black uppercase tracking-[0.2em] transition-all flex items-center justify-center gap-3 rounded-full">
-                        <Wind className="text-[#D4A574]" size={16} />
-                        Shisha Menu
+                        <Wind className="text-[#D4A574]" size={16} /> 
+                        Shisha Menu 
                         <Download size={14} />
                       </a>
                     ) : (isKaraoke || isTapBar) ? (
-                      null
+                      null 
                     ) : null}
                   </div>
                 </div>
@@ -150,7 +151,7 @@ const Dining = () => {
             "Sip, socialize, and savor the finest moments in Colombo."
           </p>
           <div className="flex justify-center">
-            <div className="w-20 h-[1px] bg-[#D4A574]/30"></div>
+             <div className="w-20 h-[1px] bg-[#D4A574]/30"></div>
           </div>
         </div>
       </section>
