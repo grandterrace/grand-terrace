@@ -9,7 +9,7 @@ import nigImg from "../assets/shi.jpeg";
 
 const outlets = [
   { id: "01", title: "Governor's Bar", subtitle: "FINE SPIRITS", img: baImg, path: "/bar" },
-  { id: "02", title: "Istanbul Nights", subtitle: "Shisha Lounge", img: nigImg, path: "/shisha" },
+  { id: "02", title: "Istanbul Nights", subtitle: "Shisha - Hookah", img: nigImg, path: "/shisha" },
   { id: "03", title: "Tap Bar", subtitle: "CRAFT BREWS", img: tapImg, path: "/tap-bar" },
   { id: "04", title: "Governor's Mic Karaoke", subtitle: "EXCLUSIVE DINING", img: kerImg, path: "/karaoke" },
 ];
