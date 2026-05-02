@@ -3,9 +3,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowUpRight, X, Sparkles, Camera } from 'lucide-react';
 
 // --- ASSETS IMPORT ---
-import barImg from '../assets/taptap.png';
+import barImg from '../assets/taptap.jpeg';
 import karaokeImg from '../assets/karaoke.png';
-import nightsImg from '../assets/shi.png';
+import nightsImg from '../assets/shi.jpeg';
 import tapImg from '../assets/tt.jpeg';
 import tapbarImg from '../assets/tapbar.png';
 import niImg from '../assets/ni.png';
