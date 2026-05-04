@@ -51,9 +51,10 @@ const Shisha = () => {
             <h3 className="text-[#D4A574] text-[10px] uppercase tracking-[0.2em] font-bold mb-4 font-sans">View Our Selection</h3>
             <div className="flex flex-wrap gap-4">
               <a
-                href="/menus/Istanbul_Nights_Menu.pdf"
+                href="/menus/istanbul-nights-menu.pdf"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noreferrer"
+                download="Istanbul_Nights_Menu.pdf"
                 className="flex-1 min-w-fit border border-white/10 hover:border-[#D4A574] text-stone-300 hover:text-[#D4A574] px-8 py-4 text-[10px] font-black uppercase tracking-[0.1em] transition-all flex items-center justify-center gap-2 rounded-full font-sans"
               >
                 <BookOpen size={14} /> Shisha Menu
