@@ -7,7 +7,7 @@ import niLogo from "../assets/ni.png";
 
 const Shisha = () => {
   return (
-    <div className="bg-[#0c0a09] min-h-screen text-[#E6D5C3] font-serif selection:bg-[#D4A574]">
+    <div className="bg-[#0c0a09] min-h-screen text-[#E6D5C3] font-serif selection:bg-[#D4A574] overflow-x-hidden">
       {/* Hero Section */}
       <section className="relative h-[65vh] flex items-end pb-16 px-6 md:px-20 overflow-hidden">
         <motion.img
@@ -25,7 +25,7 @@ const Shisha = () => {
           <motion.h1
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            className="text-6xl md:text-9xl uppercase tracking-tight"
+            className="text-6xl md:text-8xl uppercase tracking-tight"
           >
             Istanbul Nights
           </motion.h1>
@@ -40,7 +40,7 @@ const Shisha = () => {
 
           </h2>
           <p className="text-2xl md:text-3xl font-light italic opacity-80 leading-relaxed">
-            "Transport yourself to the heart of Turkey. Mocktails, Fresh juice and Tasty bites" In The Heart of Colombo's Colonial Herritage, With Amazing Views of A Starlit City !
+            "Transport yourself to the heart of Turkey" Mocktails, Fresh juice and Tasty bites, In The Heart of Colombo's Colonial Herritage - With Amazing Views of A Starlit City !
           </p>
 
           {/* Time and Location moved below the logo */}
@@ -81,10 +81,14 @@ const Shisha = () => {
           </div>
 
           {/* Info Badges */}
-          <div className="flex justify-center gap-10 mt-10">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-10 mt-10">
             <div className="flex items-center gap-3">
               <Clock className="text-[#D4A574]" size={18} />
               <span className="text-[10px] tracking-widest uppercase font-bold">TWO pm to midnight</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <MapPin className="text-[#D4A574]" size={18}/>
+              <span className="text-[10px] tracking-widest uppercase font-bold">terrace</span>
             </div>
           </div>
         </motion.div>

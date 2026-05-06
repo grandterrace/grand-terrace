@@ -11,7 +11,7 @@ const istanbulMenu = "/menus/Istanbul_Nights_Menu.pdf";
 
 const Dining = () => {
   return (
-    <div className="bg-[#0c0a09] min-h-screen pt-32 selection:bg-[#D4A574] selection:text-black">
+    <div className="bg-[#0c0a09] min-h-screen pt-32 selection:bg-[#D4A574] selection:text-black overflow-x-hidden">
 
       {/* --- HERO SECTION --- */}
       <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
@@ -90,17 +90,23 @@ const Dining = () => {
                       <Zap className="text-[#D4A574] shrink-0" size={18} />
                       <div>
                         <span className="block text-[9px] uppercase text-stone-500 tracking-[0.2em] font-bold mb-1">Status</span>
-                        <span className="text-[13px] text-stone-200">Open Daily</span>
+                        <div className="text-[13px] text-stone-200 whitespace-pre-line">{outlet.status}</div>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <Flame className="text-[#D4A574] shrink-0" size={18} />
                       <div>
                         <span className="block text-[9px] uppercase text-stone-500 tracking-[0.2em] font-bold mb-1">Timing</span>
-                        <span className="text-[13px] text-stone-200">2PM to midnight</span>
+                        <div className="text-[13px] text-stone-200 whitespace-pre-line">{outlet.openingHours}</div>
                       </div>
                     </div>
                   </div>
+                  
+                  {outlet.p && (
+                    <p className="text-[#D4A574] text-[12px] font-medium tracking-wide mt-4 italic">
+                      * {outlet.p}
+                    </p>
+                  )}
 
                   {/* Buttons Section */}
                   <div className="flex flex-wrap gap-4 pt-4 justify-center lg:justify-start">

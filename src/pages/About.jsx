@@ -2,10 +2,12 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Award, Users, Heart, Star, Clock, MapPin, Phone, Mail, Utensils, Wine, ChefHat, Sparkles, History, Globe } from "lucide-react";
 import logo from "../assets/hotel.png";
+import barLogo from '../assets/bar1.png';
+import karaokeLogo from '../assets/karaoke1.jpg';
 
 export default function About() {
   return (
-    <div className="bg-[#0c0a09] min-h-screen pt-32 selection:bg-[#D4A574] selection:text-black">
+    <div className="bg-[#0c0a09] min-h-screen pt-32 selection:bg-[#D4A574] selection:text-black overflow-x-hidden">
 
       {/* --- HERO SECTION: THE LEGACY --- */}
       <section className="relative py-32 px-6 overflow-hidden">
@@ -87,12 +89,27 @@ export default function About() {
                     ))}
                   </div>
                 </div>
+                <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-12 pt-10 mt-10 border-t border-white/5">
+                    <div className="w-28 h-28 md:w-36 md:h-36 flex items-center justify-center bg-white/[0.03] rounded-3xl border border-white/5 group/logo hover:border-[#D4A574]/30 transition-all duration-500">
+                      <img 
+                          src={barLogo} 
+                          alt="Bar Logo" 
+                          className="w-20 h-20 md:w-28 md:h-28 object-contain grayscale opacity-60 group-hover/logo:opacity-100 group-hover/logo:grayscale-0 transition-all duration-700"
+                      />
+                    </div>
+                    <div className="w-28 h-28 md:w-36 md:h-36 flex items-center justify-center bg-white/[0.03] rounded-3xl border border-white/5 group/logo hover:border-[#D4A574]/30 transition-all duration-500">
+                      <img 
+                          src={karaokeLogo} 
+                          alt="Karaoke Logo" 
+                          className="w-20 h-20 md:w-28 md:h-28 object-contain grayscale opacity-60 group-hover/logo:opacity-100 group-hover/logo:grayscale-0 transition-all duration-700"
+                      />
+                    </div>
+                </div> 
               </div>
             </motion.div>
           </div>
         </div>
       </section>
-
     </div>
   );
 }

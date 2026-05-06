@@ -12,7 +12,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0c0a09] selection:bg-[#D4A574] selection:text-black">
+    <div className="min-h-screen bg-[#0c0a09] selection:bg-[#D4A574] selection:text-black overflow-x-hidden">
 
       {/* --- HERO SECTION --- */}
       <section className="relative pt-48 pb-24 overflow-hidden border-b border-white/5">
@@ -29,7 +29,7 @@ export default function Contact() {
           >
             <br></br>
             <span className="text-[#D4A574] text-[10px] tracking-[0.6em] uppercase font-black mb-6 block">✦ Connect With Excellence ✦</span>
-            <h1 className="text-6xl md:text-8xl font-serif text-[#E6D5C3] mb-8 leading-tight">
+            <h1 className="text-5xl md:text-8xl font-serif text-[#E6D5C3] mb-8 leading-tight">
               Get <span className="italic font-light lowercase text-[#D4A574]">in</span> Touch
             </h1>
             <p className="max-w-2xl mx-auto text-stone-400 text-lg font-light leading-relaxed">
@@ -48,7 +48,7 @@ export default function Contact() {
             <div className="lg:col-span-5 space-y-10 text-center lg:text-left">
               <div>
                 <h2 className="text-3xl font-serif text-white mb-6">Concierge <span className="text-[#D4A574]">Services</span></h2>
-                <p className="text-stone-500 leading-relaxed mb-8 text-sm uppercase tracking-widest">Available 24/7 for our distinguished guests</p>
+                <p className="text-stone-500 leading-relaxed mb-8 text-sm uppercase tracking-widest">Available On All Open Hours Of Day</p>
               </div>
 
               <div className="space-y-4">
@@ -74,7 +74,7 @@ export default function Contact() {
                   icon={<Clock size={22} />}
                   title="Operating Hours"
                   value="Daily: 2 PM - Midnight"
-                  subValue="Open 365 Days"
+                  subValue="Open 365 Days (Exept Governmant Excise Holidays)"
                 />
               </div>
             </div>
