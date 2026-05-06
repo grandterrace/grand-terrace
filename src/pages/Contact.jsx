@@ -67,7 +67,7 @@ export default function Contact() {
                 <ContactInfoCard
                   icon={<Mail size={22} />}
                   title="Email Inquiry"
-                  value="grandterrace07@gmail.com"
+                  value="info@grandterrace.life"
                   subValue="Response within 2 hours"
                 />
                 <ContactInfoCard
