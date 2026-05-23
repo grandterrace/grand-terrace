@@ -56,7 +56,7 @@ const Footer = () => {
               {[
                 { Icon: Instagram, link: "https://www.instagram.com/grand__terrace" },
                 { Icon: Facebook, link: "https://www.facebook.com/people/Grand-Terrace/61571000666292/" },
-                { name: "Trip Advisor", link: "#" },
+                { name: "Trip Advisor", link: "https://www.tripadvisor.com/Attraction_Review-g293962-d34391468-Reviews-Governor_s_Mic_Karaoke-Colombo_Western_Province.html" },
               ].map((social, index) => (
                 <a
                   key={index}
