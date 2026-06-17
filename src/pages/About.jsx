@@ -90,7 +90,7 @@ export default function About() {
                 <div className="flex flex-col md:flex-row justify-center items-center gap-6 pt-10 mt-10 border-t border-white/5">
                   {/* First TripAdvisor Link */}
                   <a
-                    href="#"
+                    href="https://www.tripadvisor.com/Attraction_Review-g293962-d34391468-Reviews-Governor_s_Mic_Karaoke-Colombo_Western_Province.html"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="group/btn relative flex items-center justify-center border border-white/10 rounded-full overflow-hidden transition-all duration-500 hover:border-[#D4A574]/50 px-8 h-12"

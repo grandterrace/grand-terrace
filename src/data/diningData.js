@@ -13,8 +13,8 @@ export const diningOutlets = [
     description:
       "The ultimate destination for draft and craft beer lovers with a great selection of ciders. Enjoy a chilled atmosphere with an extensive range of local and international brews on tap, complemented by spicy, localized Bar bites.",
     image: tapImg,
-    openingHours: "02:00 PM - Midnight,\n2:00 PM - 8:00 PM",
-    status: "Monday to Wednesday,\nThursday to Sunday",
+    openingHours: "12:00 PM - 1:00 AM,\n12:00 PM - 2:00 AM",
+    status: "Monday to Thursday & Sunday -\nFriday & Saturday",
     dressCode: "Casual / Trendy",
     menuLink: "/menus/Beer_Menu.pdf",
   },
@@ -25,8 +25,8 @@ export const diningOutlets = [
     description:
       "Indulge in an era of colonial elegance. Offering a premium selection of local spirits, beers, ciders, vintage malts and refined Sri Lankan-inspired appetizers. The Governor’s Bar is where heritage meets high-end mixology.",
     image: baImg,
-    openingHours: "02:00 PM - Midnight",
-    status: "Open Daily",
+    openingHours: "12:00 PM - 1:00 AM,\n12:00 PM - 2:00 AM",
+    status: "Monday to Thursday & Sunday -\nFriday & Saturday",
     dressCode: "Smart Casual / Formal",
     menuLink: "/menus/Bite_Menu.pdf",
   },
@@ -37,8 +37,8 @@ export const diningOutlets = [
     description:
       "Experience the magic of the Bosphorus in the heart of Colombo. Featuring authentic and premium shisha - hookah, mocktails and fresh juice under the stars for a true Mediterranean escape.",
     image: nigImg,
-    openingHours: "02:00 PM - Midnight",
-    status: "Open Daily",
+    openingHours: "12:00 PM - 1:00 AM,\n12:00 PM - 2:00 AM",
+    status: "Monday to Thursday & Sunday -\nFriday & Saturday",
     dressCode: "Evening Wear / Smart Casual",
     menuLink: "/menus/Istanbul_Nights_Menu.pdf",
   },
@@ -49,8 +49,8 @@ export const diningOutlets = [
     description:
       "Sing your heart out in total privacy. Our Karaoke & Singing Suite combines a state-of-the-art sound system with a vibrant menu of cocktails, shots, wines, Bar Bites and signature platters perfect for sharing with the squad.",
     image: kerImg,
-    openingHours: "08:30 PM - 01:00 AM",
-    status: "Thursday to Sunday",
+    openingHours: "12:00 PM - 1:00 AM,\n12:00 PM - 2:00 AM",
+    status: "Monday to Thursday & Sunday -\nFriday & Saturday",
     p: "Karaoke Nights Reservations Only",
     dressCode: "Casual",
     menuLink: "/menus/Bar_Menu.pdf",
