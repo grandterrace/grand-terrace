@@ -8,6 +8,8 @@ const governorsBarMenu = "/menus/Bite_Menu.pdf";
 const karaokeSuiteMenu = "/menus/Bar_Menu.pdf";
 const tapBarMenu = "/menus/Beer_Menu.pdf";
 const istanbulMenu = "/menus/Istanbul_Nights_Menu.pdf";
+const lunchTimeMenu = "/menus/LUNCH MENU FRONT.pdf";
+const pizzaBurgerMenu = "/menus/PIZZA MENU FRONT.pdf";
 
 const Dining = () => {
   return (
@@ -136,6 +138,22 @@ const Dining = () => {
                         >
                           <Utensils size={14} /> Bite Menu
                         </a>
+                        <a
+                          href={lunchTimeMenu}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex-1 min-w-fit border border-white/10 hover:border-[#D4A574] text-stone-300 hover:text-[#D4A574] px-6 py-4 text-[10px] font-black uppercase tracking-[0.1em] transition-all flex items-center justify-center gap-2 rounded-full"
+                        >
+                          <Utensils size={14} /> Lunch Time Menu
+                        </a>
+                        <a
+                          href={pizzaBurgerMenu}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex-1 min-w-fit border border-white/10 hover:border-[#D4A574] text-stone-300 hover:text-[#D4A574] px-6 py-4 text-[10px] font-black uppercase tracking-[0.1em] transition-all flex items-center justify-center gap-2 rounded-full"
+                          >
+                          <Flame size={14} /> Pizza - Burger - Hot Dogs
+                        </a>
                       </>
                     ) : isIstanbul ? (
                       <a
@@ -148,10 +166,30 @@ const Dining = () => {
                         View Shisha Menu
                         <ExternalLink size={14} />
                       </a>
-                    ) : (isKaraoke || isTapBar) ? (
+                    ) : isTapBar ? (
+                      <>
+                        <a
+                          href={lunchTimeMenu}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex-1 min-w-fit border border-white/10 hover:border-[#D4A574] text-stone-300 hover:text-[#D4A574] px-6 py-4 text-[10px] font-black uppercase tracking-[0.1em] transition-all flex items-center justify-center gap-2 rounded-full"
+                        >
+                          <Utensils size={14} /> Lunch Time Menu
+                        </a>
+                        <a
+                          href={pizzaBurgerMenu}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex-1 min-w-fit border border-white/10 hover:border-[#D4A574] text-stone-300 hover:text-[#D4A574] px-6 py-4 text-[10px] font-black uppercase tracking-[0.1em] transition-all flex items-center justify-center gap-2 rounded-full"
+                        >
+                          <Flame size={14} /> Pizza - Burger - Hot Dogs
+                        </a>
+                      </>
+                    ) : isKaraoke ? (
                       null
-                    ) : null}
-                  </div>
+                    ) : null
+                    }
+                    </div>
                 </div>
               </motion.div>
             );

@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Wine, Clock, MapPin, Beer as BeerIcon, Utensils } from 'lucide-react';
+import { ArrowLeft, Wine, Clock, MapPin, Beer as BeerIcon, Utensils, Flame } from 'lucide-react';
 import baImg from "../assets/tt.jpeg";
 import barPromo from "../assets/bar.png";
 
@@ -79,6 +79,24 @@ const Bar = () => {
               >
                 <Utensils size={14} /> Bite Menu
               </a>
+
+              <a 
+                href="/menus/LUNCH MENU FRONT.pdf" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 min-w-fit border border-white/10 hover:border-[#D4A574] text-stone-300 hover:text-[#D4A574] px-6 py-4 text-[10px] font-black uppercase tracking-[0.1em] transition-all flex items-center justify-center gap-2 rounded-full"
+              >
+                <Utensils size={14} /> Lunch Time Menu
+              </a>
+
+              <a 
+                href="/menus/PIZZA MENU FRONT.pdf" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 min-w-fit border border-white/10 hover:border-[#D4A574] text-stone-300 hover:text-[#D4A574] px-6 py-4 text-[10px] font-black uppercase tracking-[0.1em] transition-all flex items-center justify-center gap-2 rounded-full"
+              >
+                <Flame size={14} /> Pizza - Burger - Hot Dogs
+              </a>
             </div>
           </div>
         </div>
@@ -105,10 +123,17 @@ const Bar = () => {
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-10 mt-10">
             <div className="flex items-center gap-3">
               <Clock className="text-[#D4A574]" size={18}/>
-              <span className="text-[10px] tracking-widest uppercase font-bold">two pm to midnight</span>
+              <div className="flex flex-col">
+                <span className="text-[9px] tracking-widest uppercase font-bold">Monday to Thursday & Sunday</span>
+                <span className="text-[10px] tracking-widest uppercase font-bold">12:00 PM - 1:00 AM </span>
+              </div>
+              <div className="flex flex-col">
+                <span className="text-[9px] tracking-widest uppercase font-bold">Friday & Saturday </span>
+                <span className="text-[10px] tracking-widest uppercase font-bold">12:00 PM - 2:00 AM</span>
+              </div>
             </div>
             <div className="flex items-center gap-3">
-              <MapPin className="text-[#D4A574]" size={18}/>
+              <MapPin className="text-[#D4A574]" size={15}/>
               <span className="text-[10px] tracking-widest uppercase font-bold">terrace</span>
             </div>
           </div>

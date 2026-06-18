@@ -84,9 +84,14 @@ const Shisha = () => {
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-10 mt-10">
             <div className="flex items-center gap-3">
               <Clock className="text-[#D4A574]" size={18} />
-              <span className="text-[10px] tracking-widest uppercase font-bold">TWO pm to midnight</span>
-            </div>
-            <div className="flex items-center gap-3">
+              <div className="flex flex-col">
+                <span className="text-[9px] tracking-widest uppercase font-bold">Monday to Thursday & Sunday</span>
+                <span className="text-[10px] tracking-widest uppercase font-bold">12:00 PM - 1:00 AM </span>
+              </div>
+              <div className="flex flex-col">
+                <span className="text-[9px] tracking-widest uppercase font-bold">Friday & Saturday </span>
+                <span className="text-[10px] tracking-widest uppercase font-bold">12:00 PM - 2:00 AM</span>
+              </div>
               <MapPin className="text-[#D4A574]" size={18}/>
               <span className="text-[10px] tracking-widest uppercase font-bold">terrace</span>
             </div>

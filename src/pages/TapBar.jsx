@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Beer, Clock, MapPin } from 'lucide-react';
+import { ArrowLeft, Beer, Clock, MapPin, Utensils, Flame } from 'lucide-react';
 import tapImg from "../assets/taptap.jpeg";
 import tapLogo from "../assets/tap-bar.png";
 
@@ -23,6 +23,29 @@ const TapBar = () => {
           <p className="text-2xl md:text-3xl font-light italic opacity-80 leading-relaxed">"Founded in 1875, Tap Bar stands as a Tmeless Landmark where History, Character and Tradition Come Together — Serving Craft and Draft Beers on Tap and Amazing Bar Bites with Live Sporting Events, Great Music, Creating a Lasting Experience for The Modern - Day Explorer"</p>
           {/* Time badge moved below the logo */}
 
+          {/* --- MENUS ADDED HERE --- */}
+          <div className="pt-8">
+            <h3 className="text-[#D4A574] text-[10px] uppercase tracking-[0.2em] font-bold mb-4">View Our Menus</h3>
+            <div className="flex flex-wrap gap-4">
+              <a 
+                href="/menus/LUNCH MENU FRONT.pdf" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 min-w-fit border border-white/10 hover:border-[#D4A574] text-stone-300 hover:text-[#D4A574] px-6 py-4 text-[10px] font-black uppercase tracking-[0.1em] transition-all flex items-center justify-center gap-2 rounded-full"
+              >
+                <Utensils size={14} /> Lunch Time Menu
+              </a>
+              
+              <a 
+                href="/menus/PIZZA MENU FRONT.pdf" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 min-w-fit border border-white/10 hover:border-[#D4A574] text-stone-300 hover:text-[#D4A574] px-6 py-4 text-[10px] font-black uppercase tracking-[0.1em] transition-all flex items-center justify-center gap-2 rounded-full"
+              >
+                <Flame size={14} /> Pizza - Burger - Hot Dogs
+              </a>
+            </div>
+          </div>
         </div>
         
         {/* Image Section */}
@@ -48,8 +71,12 @@ const TapBar = () => {
             <div className="flex items-center gap-3">
               <Clock className="text-[#D4A574]" size={18}/>
               <div className="flex flex-col">
-                <span className="text-[9px] tracking-widest uppercase font-bold">Monday to Wednesday | Thursday to Sunday</span>
-                <span className="text-[10px] tracking-widest uppercase font-bold">2.00 PM - Midnight | 2.00 PM - 8.00 PM </span>
+                <span className="text-[8px] tracking-widest uppercase font-bold">Monday to Thursday & Sunday</span>
+                <span className="text-[9px] tracking-widest uppercase font-bold">12:00 PM - 1:00 AM </span>
+              </div>
+              <div className="flex flex-col">
+                <span className="text-[8px] tracking-widest uppercase font-bold">Friday & Saturday </span>
+                <span className="text-[9px] tracking-widest uppercase font-bold">12:00 PM - 2:00 AM</span>
               </div>
             </div>
             <div className="flex items-center gap-3"> 
