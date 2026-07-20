@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Beer, Clock, MapPin, Utensils, Flame } from 'lucide-react';
+import { ArrowLeft, Beer, Clock, MapPin, Utensils, Flame, Facebook, Instagram } from 'lucide-react';
 import tapImg from "../assets/taptap.jpeg";
 import tapLogo from "../assets/tap-bar.png";
 
@@ -14,12 +14,34 @@ const TapBar = () => {
         <div className="relative z-10 w-full max-w-7xl mx-auto">
           <Link to="/" className="flex items-center gap-2 text-[#D4A574] text-[10px] uppercase tracking-widest mb-8 font-bold"><ArrowLeft size={16} /> Back</Link>
           <h1 className="text-6xl md:text-8xl uppercase tracking-tight">Tap Bar</h1>
+          
+          <div className="flex items-center gap-4 mt-6">
+            <a
+              href="https://www.instagram.com/grand__terrace"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative flex items-center justify-center border border-white/10 rounded-full overflow-hidden transition-all duration-500 hover:border-[#D4A574]/50 w-12 h-12"
+            >
+              <div className="absolute inset-0 bg-[#D4A574] translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
+              <Instagram size={18} className="relative z-10 text-white group-hover:text-black transition-colors duration-500" />
+            </a>
+            <a
+              href="https://www.facebook.com/people/Grand-Terrace/61571000666292/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative flex items-center justify-center border border-white/10 rounded-full overflow-hidden transition-all duration-500 hover:border-[#D4A574]/50 w-12 h-12"
+            >
+              <div className="absolute inset-0 bg-[#D4A574] translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
+              <Facebook size={18} className="relative z-10 text-white group-hover:text-black transition-colors duration-500" />
+            </a>
+          </div>
         </div>
       </section>
 
       <section className="py-20 px-6 md:px-20 max-w-7xl mx-auto grid md:grid-cols-2 gap-20">
         <div>
           <h2 className="text-[#D4A574] text-[10px] uppercase tracking-[0.4em] font-black mb-8 italic">Tap Bar - ( Established 1875 )</h2>
+
           <p className="text-2xl md:text-3xl font-light italic opacity-80 leading-relaxed">"Founded in 1875, Tap Bar stands as a Tmeless Landmark where History, Character and Tradition Come Together — Serving Craft and Draft Beers on Tap and Amazing Bar Bites with Live Sporting Events, Great Music, Creating a Lasting Experience for The Modern - Day Explorer"</p>
           {/* Time badge moved below the logo */}
 

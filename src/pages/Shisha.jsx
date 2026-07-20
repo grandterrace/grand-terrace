@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Flame, Wind, BookOpen, Clock, MapPin } from 'lucide-react';
+import { ArrowLeft, Flame, Wind, BookOpen, Clock, MapPin, Facebook, Instagram } from 'lucide-react';
 import nigImg from "../assets/shi.png";
 import niLogo from "../assets/ni.png";
 
@@ -29,16 +29,42 @@ const Shisha = () => {
           >
             Istanbul Nights
           </motion.h1>
+          <motion.div
+            initial={{ y: 30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.1 }}
+            className="flex items-center gap-4 mt-6"
+          >
+            <a
+              href="https://www.instagram.com/grand__terrace"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative flex items-center justify-center border border-white/10 rounded-full overflow-hidden transition-all duration-500 hover:border-[#D4A574]/50 w-12 h-12"
+            >
+              <div className="absolute inset-0 bg-[#D4A574] translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
+              <Instagram size={18} className="relative z-10 text-white group-hover:text-black transition-colors duration-500" />
+            </a>
+            <a
+              href="https://www.facebook.com/people/Grand-Terrace/61571000666292/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative flex items-center justify-center border border-white/10 rounded-full overflow-hidden transition-all duration-500 hover:border-[#D4A574]/50 w-12 h-12"
+            >
+              <div className="absolute inset-0 bg-[#D4A574] translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
+              <Facebook size={18} className="relative z-10 text-white group-hover:text-black transition-colors duration-500" />
+            </a>
+          </motion.div>
         </div>
       </section>
 
       {/* Details Section */}
       <section className="py-20 px-6 md:px-20 max-w-7xl mx-auto grid md:grid-cols-2 gap-20">
         <div className="space-y-8">
-          <h2 className="text-[#D4A574] text-[10px] uppercase tracking-[0.4em] font-black mb-8 italic">
+          <h2 className="text-[#D4A574] text-[10px] uppercase tracking-[0.4em] font-black italic">
             Shisha and hookah on the terrace
 
           </h2>
+
           <p className="text-2xl md:text-3xl font-light italic opacity-80 leading-relaxed">
             "Transport yourself to the heart of Turkey" Mocktails, Fresh juice and Tasty bites, In The Heart of Colombo's Colonial Herritage - With Amazing Views of A Starlit City !
           </p>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Wine, Clock, MapPin, Beer as BeerIcon, Utensils, Flame } from 'lucide-react';
+import { ArrowLeft, Wine, Clock, MapPin, Beer as BeerIcon, Utensils, Flame, Facebook, Instagram } from 'lucide-react';
 import baImg from "../assets/tt.jpeg";
 import barPromo from "../assets/bar.png";
 
@@ -30,6 +30,31 @@ const Bar = () => {
           >
             Governor's Bar
           </motion.h1>
+          <motion.div
+            initial={{ y: 30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.1 }}
+            className="flex items-center gap-4 mt-6"
+          >
+            <a
+              href="https://www.instagram.com/grand__terrace"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative flex items-center justify-center border border-white/10 rounded-full overflow-hidden transition-all duration-500 hover:border-[#D4A574]/50 w-12 h-12"
+            >
+              <div className="absolute inset-0 bg-[#D4A574] translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
+              <Instagram size={18} className="relative z-10 text-white group-hover:text-black transition-colors duration-500" />
+            </a>
+            <a
+              href="https://www.facebook.com/people/Grand-Terrace/61571000666292/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative flex items-center justify-center border border-white/10 rounded-full overflow-hidden transition-all duration-500 hover:border-[#D4A574]/50 w-12 h-12"
+            >
+              <div className="absolute inset-0 bg-[#D4A574] translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
+              <Facebook size={18} className="relative z-10 text-white group-hover:text-black transition-colors duration-500" />
+            </a>
+          </motion.div>
         </div>
       </section>
 
@@ -40,6 +65,7 @@ const Bar = () => {
             Spirits of heritage on York street Colombo 01(fort)
 
           </h2>
+
           <p className="text-2xl md:text-3xl font-light leading-relaxed opacity-80 italic">
             "Collection of Arrack, Malts, Signature Cocktails, Shooters, Superb Sri Lankan Bar Bites, Live Music, Dj Music, Amazing Lighting, Live Sporting Events on Giant Screens while You Party on the Grand Terrace"
             <br></br> 
