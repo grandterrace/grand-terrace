@@ -15,24 +15,24 @@ const TapBar = () => {
           <Link to="/" className="flex items-center gap-2 text-[#D4A574] text-[10px] uppercase tracking-widest mb-8 font-bold"><ArrowLeft size={16} /> Back</Link>
           <h1 className="text-6xl md:text-8xl uppercase tracking-tight">Tap Bar</h1>
           
-          <div className="flex items-center gap-4 mt-6">
+          <div className="flex flex-wrap items-center gap-4 mt-6 w-full">
             <a
               href="https://www.instagram.com/grand__terrace"
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative flex items-center justify-center border border-white/10 rounded-full overflow-hidden transition-all duration-500 hover:border-[#D4A574]/50 w-16 h-16"
+              className="group relative flex items-center justify-center border border-white/10 rounded-full overflow-hidden transition-all duration-500 hover:border-[#D4A574]/50 w-12 h-12 md:w-16 md:h-16"
             >
               <div className="absolute inset-0 bg-[#D4A574] translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
-              <Instagram size={24} className="relative z-10 text-white group-hover:text-black transition-colors duration-500" />
+              <Instagram size={20} className="relative z-10 text-white group-hover:text-black transition-colors duration-500" />
             </a>
             <a
               href="https://www.facebook.com/people/Grand-Terrace/61571000666292/"
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative flex items-center justify-center border border-white/10 rounded-full overflow-hidden transition-all duration-500 hover:border-[#D4A574]/50 w-16 h-16"
+              className="group relative flex items-center justify-center border border-white/10 rounded-full overflow-hidden transition-all duration-500 hover:border-[#D4A574]/50 w-12 h-12 md:w-16 md:h-16"
             >
               <div className="absolute inset-0 bg-[#D4A574] translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
-              <Facebook size={24} className="relative z-10 text-white group-hover:text-black transition-colors duration-500" />
+              <Facebook size={20} className="relative z-10 text-white group-hover:text-black transition-colors duration-500" />
             </a>
             <button
               onClick={() => {

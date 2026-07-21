@@ -15,35 +15,24 @@ const Karaoke = () => {
           <Link to="/" className="flex items-center gap-2 text-[#D4A574] text-[10px] uppercase tracking-widest mb-8 font-bold"><ArrowLeft size={16} /> Back</Link>
           <h1 className="text-6xl md:text-7xl uppercase tracking-tight">Governor's Mic Karaoke <br></br>( Singing Suite )</h1>
           
-          <div className="flex items-center gap-4 mt-6">
+          <div className="flex flex-wrap items-center gap-4 mt-6 w-full">
             <a
               href="https://www.instagram.com/grand__terrace"
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative flex items-center justify-center border border-white/10 rounded-full overflow-hidden transition-all duration-500 hover:border-[#D4A574]/50 w-16 h-16"
+              className="group relative flex items-center justify-center border border-white/10 rounded-full overflow-hidden transition-all duration-500 hover:border-[#D4A574]/50 w-12 h-12 md:w-16 md:h-16 order-1 md:order-1"
             >
               <div className="absolute inset-0 bg-[#D4A574] translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
-              <Instagram size={24} className="relative z-10 text-white group-hover:text-black transition-colors duration-500" />
+              <Instagram size={20} className="relative z-10 text-white group-hover:text-black transition-colors duration-500" />
             </a>
             <a
               href="https://www.facebook.com/people/Grand-Terrace/61571000666292/"
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative flex items-center justify-center border border-white/10 rounded-full overflow-hidden transition-all duration-500 hover:border-[#D4A574]/50 w-16 h-16"
+              className="group relative flex items-center justify-center border border-white/10 rounded-full overflow-hidden transition-all duration-500 hover:border-[#D4A574]/50 w-12 h-12 md:w-16 md:h-16 order-2 md:order-2"
             >
               <div className="absolute inset-0 bg-[#D4A574] translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
-              <Facebook size={24} className="relative z-10 text-white group-hover:text-black transition-colors duration-500" />
-            </a>
-            <a
-              href="https://www.tripadvisor.com/Attraction_Review-g293962-d34391468-Reviews-Governor_s_Mic_Karaoke-Colombo_Western_Province.html"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative flex items-center justify-center border border-white/10 rounded-full overflow-hidden transition-all duration-500 hover:border-[#D4A574]/50 px-8 h-16"
-            >
-              <div className="absolute inset-0 bg-[#D4A574] translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
-              <span className="relative z-10 text-[10px] font-black uppercase tracking-[0.2em] text-white group-hover:text-black transition-colors duration-500 whitespace-nowrap">
-                Trip Advisor - Karaoke
-              </span>
+              <Facebook size={20} className="relative z-10 text-white group-hover:text-black transition-colors duration-500" />
             </a>
             <button
               onClick={() => {
@@ -54,11 +43,23 @@ const Karaoke = () => {
                   window.scrollTo({ top: elementPosition - offset, behavior: 'smooth' });
                 }
               }}
-              className="flex items-center gap-2 text-[#D4A574] hover:text-white transition-colors duration-300 text-[10px] uppercase tracking-[0.2em] font-bold ml-4 cursor-pointer group"
+              className="flex items-center gap-2 text-[#D4A574] hover:text-white transition-colors duration-300 text-[10px] uppercase tracking-[0.2em] font-bold ml-4 cursor-pointer group order-3 md:order-4"
             >
               Leave us a review
               <ArrowDown size={14} className="transition-transform duration-300 group-hover:translate-y-1" />
             </button>
+            <div className="basis-full h-0 md:hidden order-4 md:order-5"></div>
+            <a
+              href="https://www.tripadvisor.com/Attraction_Review-g293962-d34391468-Reviews-Governor_s_Mic_Karaoke-Colombo_Western_Province.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative flex items-center justify-center border border-white/10 rounded-full overflow-hidden transition-all duration-500 hover:border-[#D4A574]/50 px-6 h-12 md:px-8 md:h-16 order-5 md:order-3"
+            >
+              <div className="absolute inset-0 bg-[#D4A574] translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
+              <span className="relative z-10 text-[10px] font-black uppercase tracking-[0.2em] text-white group-hover:text-black transition-colors duration-500 whitespace-nowrap">
+                Trip Advisor - Karaoke
+              </span>
+            </a>
           </div>
         </div>
       </section>
