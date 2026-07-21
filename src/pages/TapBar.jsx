@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft, Beer, Clock, MapPin, Utensils, Flame, Facebook, Instagram, ArrowDown } from 'lucide-react';
 import tapImg from "../assets/taptap.jpeg";
 import tapLogo from "../assets/tap-bar.png";
+import { smoothScrollTo } from '../lib/utils';
 
 const TapBar = () => {
   return (
@@ -40,7 +41,7 @@ const TapBar = () => {
                 if (el) {
                   const elementPosition = el.getBoundingClientRect().top + window.scrollY;
                   const offset = window.innerWidth < 1024 ? 120 : 240;
-                  window.scrollTo({ top: elementPosition - offset, behavior: 'smooth' });
+                  smoothScrollTo(elementPosition - offset, 1500);
                 }
               }}
               className="flex items-center gap-2 text-[#D4A574] hover:text-white transition-colors duration-300 text-[10px] uppercase tracking-[0.2em] font-bold ml-4 cursor-pointer group"
