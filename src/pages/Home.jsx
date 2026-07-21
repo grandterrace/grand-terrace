@@ -92,7 +92,7 @@ const Home = () => {
       {/* --- MOBILE OPTIMIZED SLIDER --- */}
       <main
         ref={scrollRef}
-        className="flex overflow-x-auto no-scrollbar h-[75vh] md:h-[85vh] items-center touch-pan-x cursor-grab active:cursor-grabbing"
+        className="flex overflow-x-auto no-scrollbar h-[75vh] md:h-[85vh] items-center touch-auto cursor-grab active:cursor-grabbing"
       >
         <div className="flex flex-nowrap gap-5 md:gap-12 px-6 md:px-[20vw]">
           {outlets.map((item) => (
