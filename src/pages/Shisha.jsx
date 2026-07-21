@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Flame, Wind, BookOpen, Clock, MapPin, Facebook, Instagram } from 'lucide-react';
+import { ArrowLeft, Flame, Wind, BookOpen, Clock, MapPin, Facebook, Instagram, ArrowDown } from 'lucide-react';
 import nigImg from "../assets/shi.png";
 import niLogo from "../assets/ni.png";
 
@@ -53,6 +53,20 @@ const Shisha = () => {
               <div className="absolute inset-0 bg-[#D4A574] translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
               <Facebook size={24} className="relative z-10 text-white group-hover:text-black transition-colors duration-500" />
             </a>
+            <button
+              onClick={() => {
+                const el = document.getElementById('map-section');
+                if (el) {
+                  const elementPosition = el.getBoundingClientRect().top + window.scrollY;
+                  const offset = window.innerWidth < 1024 ? 120 : 240;
+                  window.scrollTo({ top: elementPosition - offset, behavior: 'smooth' });
+                }
+              }}
+              className="flex items-center gap-2 text-[#D4A574] hover:text-white transition-colors duration-300 text-[10px] uppercase tracking-[0.2em] font-bold ml-4 cursor-pointer group"
+            >
+              Leave us a review
+              <ArrowDown size={14} className="transition-transform duration-300 group-hover:translate-y-1" />
+            </button>
           </motion.div>
         </div>
       </section>
@@ -126,7 +140,7 @@ const Shisha = () => {
       </section>
 
       {/* --- MAP SECTION --- */}
-<section className="py-20 px-6 md:px-20 max-w-7xl mx-auto">
+<section id="map-section" className="py-20 px-6 md:px-20 max-w-7xl mx-auto">
   <div className="rounded-[40px] overflow-hidden border border-white/5 shadow-2xl h-[450px] w-full">
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d990.1522623139637!2d79.84446566959708!3d6.93724033085326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae259000c8b5e05%3A0x6e29ff3c684f9ce8!2sISTANBUL%20NIGHTS%20-%20SHISHA%20HOOKAH%20VERANDA!5e0!3m2!1sen!2slk!4v1778011841395!5m2!1sen!2slk" 

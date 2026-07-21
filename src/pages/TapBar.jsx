@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Beer, Clock, MapPin, Utensils, Flame, Facebook, Instagram } from 'lucide-react';
+import { ArrowLeft, Beer, Clock, MapPin, Utensils, Flame, Facebook, Instagram, ArrowDown } from 'lucide-react';
 import tapImg from "../assets/taptap.jpeg";
 import tapLogo from "../assets/tap-bar.png";
 
@@ -34,6 +34,20 @@ const TapBar = () => {
               <div className="absolute inset-0 bg-[#D4A574] translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
               <Facebook size={24} className="relative z-10 text-white group-hover:text-black transition-colors duration-500" />
             </a>
+            <button
+              onClick={() => {
+                const el = document.getElementById('map-section');
+                if (el) {
+                  const elementPosition = el.getBoundingClientRect().top + window.scrollY;
+                  const offset = window.innerWidth < 1024 ? 120 : 240;
+                  window.scrollTo({ top: elementPosition - offset, behavior: 'smooth' });
+                }
+              }}
+              className="flex items-center gap-2 text-[#D4A574] hover:text-white transition-colors duration-300 text-[10px] uppercase tracking-[0.2em] font-bold ml-4 cursor-pointer group"
+            >
+              Leave us a review
+              <ArrowDown size={14} className="transition-transform duration-300 group-hover:translate-y-1" />
+            </button>
           </div>
         </div>
       </section>
@@ -109,7 +123,7 @@ const TapBar = () => {
         </motion.div>
       </section>
 
-      <section className="py-20 px-6 md:px-20 max-w-7xl mx-auto">
+      <section id="map-section" className="py-20 px-6 md:px-20 max-w-7xl mx-auto">
   <div className="rounded-[40px] overflow-hidden border border-white/5 shadow-2xl h-[450px] w-full">
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d990.1507626066099!2d79.84458866959709!3d6.937953530851203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25926dd07a537%3A0x719eae312e6f8529!2sGrand%20Oriental%20Hotel%20-%20Tap%20Bar!5e0!3m2!1sen!2slk!4v1778011904621!5m2!1sen!2slk"
