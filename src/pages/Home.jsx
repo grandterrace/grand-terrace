@@ -99,7 +99,7 @@ const Home = () => {
             <section key={item.id} className="h-[65vh] md:h-[75vh] flex-shrink-0">
               <div className="h-full aspect-[9/14] md:aspect-[9/15] relative overflow-hidden rounded-[40px] md:rounded-[60px] border border-white/5 shadow-2xl group">
                 <img src={item.img} alt={item.title} className="w-full h-full object-cover opacity-100" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/0 to-transparent"></div>
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors duration-500"></div>
                 <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-8">
                   <p className={`text-[10px] md:text-[12px] tracking-[0.5em] uppercase mb-4 font-bold ${item.subtitle === 'CRAFT BREWS' ? 'text-[#D4A574]' : 'text-[#D4A574]'
                     }`}>
@@ -107,7 +107,7 @@ const Home = () => {
                   </p>
                   <h3 className="text-white text-3xl md:text-5xl font-serif mb-8">{item.title}</h3>
                   <Link to={item.path}>
-                    <button className="text-[10px] text-white border border-white/40 px-10 py-3 rounded-full uppercase tracking-[0.2em] font-bold active:scale-95 transition-all">
+                    <button className="text-[10px] text-white bg-white/10 backdrop-blur-[4px] border border-white/30 px-10 py-3 rounded-full uppercase tracking-[0.2em] font-bold shadow-lg hover:bg-white hover:text-stone-950 hover:border-white active:scale-95 transition-all duration-300">
                       Explore
                     </button>
                   </Link>
