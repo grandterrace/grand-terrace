@@ -39,19 +39,19 @@ const Shisha = () => {
               href="https://www.instagram.com/grand__terrace"
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative flex items-center justify-center border border-white/10 rounded-full overflow-hidden transition-all duration-500 hover:border-[#D4A574]/50 w-12 h-12"
+              className="group relative flex items-center justify-center border border-white/10 rounded-full overflow-hidden transition-all duration-500 hover:border-[#D4A574]/50 w-16 h-16"
             >
               <div className="absolute inset-0 bg-[#D4A574] translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
-              <Instagram size={18} className="relative z-10 text-white group-hover:text-black transition-colors duration-500" />
+              <Instagram size={24} className="relative z-10 text-white group-hover:text-black transition-colors duration-500" />
             </a>
             <a
               href="https://www.facebook.com/people/Grand-Terrace/61571000666292/"
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative flex items-center justify-center border border-white/10 rounded-full overflow-hidden transition-all duration-500 hover:border-[#D4A574]/50 w-12 h-12"
+              className="group relative flex items-center justify-center border border-white/10 rounded-full overflow-hidden transition-all duration-500 hover:border-[#D4A574]/50 w-16 h-16"
             >
               <div className="absolute inset-0 bg-[#D4A574] translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
-              <Facebook size={18} className="relative z-10 text-white group-hover:text-black transition-colors duration-500" />
+              <Facebook size={24} className="relative z-10 text-white group-hover:text-black transition-colors duration-500" />
             </a>
           </motion.div>
         </div>
